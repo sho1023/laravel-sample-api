@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: ./Dockerfile
+    ports:
+      - 9000:9000
+    volumes:
+      - ../src:/var/www/app
+  web:
+    build:
+      context: ./nginx
+      dockerfile: ./Dockerfile
+    ports:
+      - 8080:80
+    depends_on:
+      - api
+    volumes:
+      - ../src:/var/www/app

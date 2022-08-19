@@ -1,9 +1,9 @@
-/node_modules
-/public/build
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
+node_modules
+src/public/build
+src/public/hot
+src/public/storage
+src/storage/*.key
+src/vendor
 .env
 .env.backup
 .phpunit.result.cache
@@ -18,5 +18,3 @@ yarn-error.log
 *.log
 *.sqlite
 .htaccess
-/storage
-/config
